@@ -48,16 +48,20 @@ app.get('/', (req, res) => {
   // });
   res.render('home.hbs', {
     pageTitle: 'Home Page',
-    currentYear: new Date().getFullYear(),
     welcomeText: 'Hello, Welcome to handlebars'
   });
 });
 
 app.get('/about', (req, res) => {
-  // res.send('About Page');
   res.render('about.hbs', {
-    pageTitle: 'About Page',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    projectsText: 'Portfolio page'
   });
 });
 
